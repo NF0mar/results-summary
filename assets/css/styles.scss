@@ -1,0 +1,210 @@
+/*Var*/
+$light-blue:#CAC9FF;
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Base Style*/
+.app {
+    background-color: #ECF2FF;
+    padding: 70px 352px 0;
+}
+
+.container {
+    width: 736px;
+    height: 512px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: #fff;
+    font-family: "Hanken Grotesk";
+    border-radius: 32px;
+}
+
+/*result card*/
+.result {
+    background-image:linear-gradient(180deg, #75F 0%, #6943FF 0.01%, #2F2CE9 100%);
+    width: 368px;
+    height: 512px ;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 54px;
+    &__head {
+        color: $light-blue;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__score {
+        color: #fff;
+        width: 200px;
+        height: 200px;
+        background-image: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0.00) 100%, rgba(37, 33, 201, 0.00) 100%);
+        font-size: 72px;
+        border-radius: 50%;
+        margin-top: 35px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    &__full {
+        color: $light-blue;
+        font-size: 18px;
+        font-weight: inherit;
+        display: block;
+    }
+    
+    &__performance {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 700px;
+        margin-top: 29px;
+    }
+
+    &__comment {
+        color: $light-blue;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 16px;
+    }
+}
+
+/*Summary Card*/
+
+.summary {
+    background-color: #fff;
+    width: 368px;
+    height: 512px ;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    padding: 38px 40px;
+    &__head {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 28px;
+    }
+
+    &__reaction,
+    &__memory,
+    &__verbal,
+    &__visual {
+        background-color: hsl(9, 100%, 97%);
+        border-radius: 12px;
+        display: flex;
+        padding: 16px;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        align-items: center;
+
+    }
+    &__reaction {
+        .summary__text {
+            color: #F55; // Red for memory
+        }
+    }
+    &__memory {
+        background-color: hsl(39, 100%, 97%);
+        .summary__text {
+            color: hsl(39, 100%, 56%); // Red for memory
+        }
+        
+    }
+    &__verbal {
+        background-color: #effcf9;
+        .summary__text {
+            color: hsl(166, 100%, 37%); // Red for memory
+        }
+    }
+    &__visual {
+        background-color : hsl(221, 100%, 96%);
+        .summary__text {
+            color: #1125D6;
+        }
+    }
+    &__content{
+        display: flex;
+    }
+    &__icon {
+        font-size: 18px;
+    }
+
+    &__text {
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 12px;
+    }
+
+    &__number {
+        // margin: auto;
+        // margin-left: 80px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #303B59;
+        
+    }
+}
+
+.percent {
+    color: rgba(48, 59, 89, 0.5);
+}
+
+.btn {
+    background-color: #303B59;
+    color: #fff;
+    margin-top: 41px;
+    border-radius: 128px;
+    padding: 18px 0;
+    display: block;
+    text-align: center;
+    width: 288px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+
+    &:hover {
+        background-image: linear-gradient(180deg, #75F 0%, #6943FF 0.01%, #2F2CE9 100%);
+    }
+}
+
+
+@media(max-width:1095px){
+    .app {
+        padding: 0 70px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 368px;
+        height: 1000px;
+        border: 0;
+    }
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .summary {
+        border-radius: 0;
+    }
+}
+@media(max-width:900px){
+    .app {
+        padding: 0 25px ;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 368px;
+        height: 1000px;
+    }
+    .summary {
+        border-radius: 0;
+    }
+}
