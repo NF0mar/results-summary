@@ -11,7 +11,10 @@ $light-blue:#CAC9FF;
 /*Base Style*/
 .app {
     background-color: #ECF2FF;
-    padding: 70px 352px 0;
+    padding: 70px 352px ;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .container {
@@ -168,7 +171,7 @@ $light-blue:#CAC9FF;
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
-
+    transition: all 0.2s;
     &:hover {
         background-image: linear-gradient(180deg, #75F 0%, #6943FF 0.01%, #2F2CE9 100%);
     }
